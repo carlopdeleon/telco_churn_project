@@ -21,10 +21,17 @@
 * Acquire data from Sequel Ace DB
 
 * Prepare Data
+    * Remove unnecessary data to reduce noise
+        * drop duplicates
+        * customer id
+        * payment type id
+        * internet service type id
+        * contract type id
     * Create new columns utilizing existing data
-        *
-        *
-        *
+        * contract type
+        * internet service type
+        * payment type
+    * Create a train, validate, and test dataset with a split of about 56/24/20. 
 
 * Explore Data and uncover drivers
     * Answer initial questions
@@ -33,9 +40,11 @@
         *
         *
 
-* Develop machine learning model
-    * Create multiple models and choose best performing model
-    * Utilize drivers in the models
+* Develop machine learning models
+    * Utilize drivers in various machine learning models
+    * Evaluate and refine models on train and validate data sets
+    * Select best performing models
+    * Use test data set on best models
     
         
 
