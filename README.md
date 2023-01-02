@@ -38,7 +38,7 @@
 
 * Explore Data and uncover drivers
     * Answer initial questions
-        * Are customers with month-to-month contracts with monthly bills churning faster than those with 1yr/2yr contracts with similar bills?
+        * Are customers with month-to-month contracts with high expenses churning faster than those with 1yr/2yr contracts with similar bills?
             * Disregarding bill total, do month-to-month contracts churn at a higher rate than 1yr/2yr contracts?
             * Disregarding contract type, does having a higher bill affect churn rate?
         * Does having add-on services affect churn rate?
