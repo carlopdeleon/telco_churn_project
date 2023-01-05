@@ -14,7 +14,7 @@
 
 # Initial Thoughts
 
-### My initial hypothesis is that customers who are churning are customers who's monthly total bill are high and are on a month-to-month contract.
+### My initial hypothesis is that customers with month-to-month contracts churn at a higher rate than those with a one year or two year contract.
 
 # The Plan
 
@@ -28,25 +28,19 @@
         * contract type id
     * Create new columns utilizing existing data
         * contract type
-        * internet service type
         * payment type
         * tech support
         * online security
-        * online backup
-        * device protection
+
     * Create a train, validate, and test dataset with a split of about 56/24/20. 
 
 * Explore Data and uncover drivers
     * Answer initial questions
-        * Are customers with month-to-month contracts with high expenses churning faster than those with 1yr/2yr contracts with similar bills?
-            * Disregarding bill total, do month-to-month contracts churn at a higher rate than 1yr/2yr contracts?
-            * Disregarding contract type, does having a higher bill affect churn rate?
+        * Are customers with month-to-month contracts churning faster than those with 1yr/2yr contracts?
         * Does having add-on services affect churn rate?
             * online security
-            * online back-up
-            * device protection
         * Does having multiple lines affect churn rate?
-        * Does payment type affect churn rate?
+        * Does having dependents affect churn rate?
 
 * Develop machine learning models
     * Utilize drivers in various machine learning models
@@ -60,25 +54,37 @@
 # Data Dictionary
 
 | Feature | Definition |
-|---------| ---------- |
+| :-- | :-- |
 | churn | customer who has cancelled their services |
+| churn_numeric | churn column encoded |
+| contract type | type of contract. Month-to_month, One year, Two year|
 | multiple lines | customers with more than one phone line |
 | monthly charges | charges due at end of month bill cycle |
 | total charges | total amount paid from first day of service |
-| tech support no internet | add-on service with no internet service |
-| tech support yes internet | add-on service with internet service |
 | online security no internet | online security add-on service with no internet service |
 | online security yes_internet | online securtiy add-on service with internet service |
-| online backup no internet | online backup add-on service with no internet service |
-| online backup yes internet | online backup add-on service with internet service  |
-| device protection no internet | device protection add-on service with no internet service |
-| device protection yes internet | device protection add-on service with internet service  |
+| dependents_no | customers with no dependents |
+| dependents_yes | customers with dependents |
+
 
 
 # Steps to Reproduce
 
+1. Clone this repo.
+2. To acquire data, use your own env.py file to access MySql database and download data
+3. Use functions in acquire.py to upload data
+4. Use functions in prepare.py to clean and prep data.
+5. Use same configurations for models.
 
-# Key Takeaways
+# Conclusions
+
+* About 3 of every 10 customers have churned.
+* Customers with month-to-month contracts are more likely to churn
+* Customers with online_security are less likely to churn
+* Customers with multiple lines are less likely to churn.
+* Customers that have dependents are less likely to churn.
 
 
 # Recommendations
+
+* To decrease chance of a customer churning, upsell the importance of having online-security.
